@@ -18,8 +18,11 @@ package com.example.android.diceroller
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,11 +31,28 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val rollButton: Button = findViewById(R.id.roll_button)
-        rollButton.setOnClickListener{
-            Toast.makeText(this, "Boton pulsado", Toast.LENGTH_SHORT).show()
+        rollButton.setOnClickListener {
+            /*Toast.makeText(this, "Boton pulsado", Toast.LENGTH_SHORT).show()*/
+            rollDice()
+            }
+        }
+
+        private fun rollDice() {
+            val randomInt = Random().nextInt(6) + 1
+            val drawableResource = when (randomInt){
+                1 -> R.drawable.cara1
+                2 -> R.drawable.cara2
+                3 -> R.drawable.cara3
+                4 -> R.drawable.cara4
+                5 -> R.drawable.cara5
+                else -> R.drawable.cara6
+            }
+
+            val diceImage: ImageView = findViewById(R.id.dice_image)
+            diceImage.setImageResource(drawableResource)
         }
 
 
     }
     //Aqui esta mi solucion
-}
+
