@@ -2,7 +2,7 @@
 
 <resources>
 
-    <string name="app_name">Dice Roller</string>
+    <string name="app_name">Say Roller</string>
 
     <string name = "roll">Roll</string>
 </resources>
