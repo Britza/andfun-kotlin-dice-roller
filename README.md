@@ -28,6 +28,8 @@ Buscamos otra manera para la función random y la cambiamos.
 
 [Commit](https://github.com/Britza/andfun-kotlin-dice-roller/commit/86e854520d23e622474f1df878e4d431440ec79a)  
 
+## Añadimos el icono al boton
+
 1. Implementamos en el **build.gradle** el material que utilizaremos para la huella.
 2. Añadimos un nuevo drawable con el dibujo de la huella.
 3. Y por ultimo añadimos al boton el icono de la huella.
